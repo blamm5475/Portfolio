@@ -3,8 +3,6 @@ import PIL.Image
 import re
 
 def makename_exif(filepath, fallback):
-    # Thanks Payne
-    # https://stackoverflow.com/a/4765242
     image = PIL.Image.open(filepath)
     exif = image.getexif()
     if not exif:
